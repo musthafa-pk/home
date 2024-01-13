@@ -290,3 +290,29 @@
   new PureCounter();
 
 })()
+//typing like text
+document.addEventListener('DOMContentLoaded', function () {
+  var textElement = document.getElementById('typing-text');
+  var cursorElement = document.getElementById('cursor');
+  var textContent = textElement.textContent;
+  textElement.textContent = ''; // Clear the text content
+
+  function typeText(index) {
+    if (index < textContent.length) {
+      textElement.innerHTML += textContent.charAt(index);
+      index++;
+      setTimeout(function () {
+        typeText(index);
+      }, 100); // Adjust the typing speed (in milliseconds)
+    } else {
+      // Cursor blinking effect
+      cursorElement.style.display = (cursorElement.style.display === 'none') ? 'inline' : 'none';
+      setTimeout(function () {
+        typeText(0); // Restart typing when completed
+      }, 500); // Adjust the blinking speed (in milliseconds)
+    }
+  }
+
+  // Trigger the typing effect
+  typeText(0);
+});
