@@ -145,13 +145,14 @@ h6{
 }
 
 #header .logo {
-  font-size: 32px;
+  position: relative;
+  /* font-size: 32px;
   margin: 0;
   padding: 0;
   line-height: 1;
   font-weight: 700;
   letter-spacing: 2px;
-  text-transform: uppercase;
+  text-transform: uppercase; */
 }
 
 #header .logo a {
@@ -164,6 +165,15 @@ h6{
 
 #header .logo img {
   max-height: 40px;
+}
+#header .logo-text{
+  position: relative;
+  bottom: 0;
+  left:70%;
+  transform: translateX(-50%);
+  margin-top: 5px; /* Adjust as needed */
+  font-size: 14px; /* Adjust the font size as needed */
+  color:linear-gradient(90deg,#31d9f7,#88eff6);
 }
 
 /*--------------------------------------------------------------
