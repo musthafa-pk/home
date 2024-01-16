@@ -299,7 +299,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function typeText(index) {
     if (index < textContent.length) {
-      textElement.innerHTML += textContent.charAt(index);
+      var currentChar = textContent.charAt(index);
+      if (currentChar === '.') {
+        // Make the dot in blue color
+        textElement.innerHTML += '<span style="color: #31d9f7;">' + currentChar + '</span>';
+      } else if (currentChar === 'i') {
+        textElement.innerHTML += '<span style="background: linear-gradient(-10deg,#fff,#fff, #fff, #31d9f7,#31d9f7); -webkit-background-clip: text; color: transparent;">' + currentChar + '</span>';
+      } else {
+        textElement.innerHTML += currentChar;
+      }
+
       index++;
       setTimeout(function () {
         typeText(index);
@@ -308,8 +317,23 @@ document.addEventListener('DOMContentLoaded', function () {
       // Cursor blinking effect
       cursorElement.style.display = (cursorElement.style.display === 'none') ? 'inline' : 'none';
       setTimeout(function () {
-        typeText(0); // Restart typing when completed
-      }, 500); // Adjust the blinking speed (in milliseconds)
+        // Start backspacing after cursor blinks
+        backspaceText(textContent.length);
+      }, 500); // Adjust the delay before backspacing (in milliseconds)
+    }
+  }
+
+  function backspaceText(index) {
+    if (index >= 0) {
+      textElement.textContent = textContent.substring(0, index);
+      index--;
+      setTimeout(function () {
+        backspaceText(index);
+      }, 50); // Adjust the backspacing speed (in milliseconds)
+    } else {
+      // Restart typing after backspacing
+      textElement.innerHTML = ''; // Clear the text content before restarting
+      typeText(0);
     }
   }
 
