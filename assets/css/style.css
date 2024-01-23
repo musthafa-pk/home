@@ -1667,3 +1667,217 @@ section {
 
   color: #fff; /* Adjust text color */
 }
+
+/* about page */
+#about {
+  position: relative;
+  background-image: url(../img/office.jpg);
+  background-repeat: no-repeat;
+  background-color:  rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  background-size: cover;
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+}
+
+#about .icon-box-left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about .left-image{
+  align-items: center;
+  padding: 30%;
+}
+
+#about .row {
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+}
+#about h1{
+  color: #31d9f7;
+}
+#about h4,
+#about .dot-lines,
+#about .wrap-box p {
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+#about .icon-box{
+  padding: 10px;
+}
+#about-2{
+  height: 80vh;
+}
+
+#about-2 h1{
+color: #0D264F;
+font-family: Outfit;
+font-size: 44px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+#about-2 #lottie-container{
+  height: 50%;
+}
+
+#about p{
+color: #0D264F;
+font-family: Outfit;
+font-size: 28px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+#services {
+  position: relative;
+  background-image: url(../img/office.jpg);
+  background-repeat: no-repeat;
+  background-color:  rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  background-size: cover;
+  color: white;
+}
+
+#services .wrap-box {
+  padding: 25px;
+}
+
+#services .serv {
+  color: #31d9f7;
+}
+
+#service-list h1 {
+  color: white;
+}
+
+#service-list .box {
+  background-color: #0d264f;
+  color: #626262;
+  border-radius: 25px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+
+#products{
+  font-family: 'Outfit';
+}
+#products .headline{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+#products span{
+  color: #31d9f7;
+}
+#products .wrap-box{
+  display: flex;
+  align-items: space-around;
+  padding: 25px;
+  justify-content: space-around;
+}
+#products .heading{
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  color:#0D264F;
+}
+
+#products .box{
+  width: 300px;
+  background-color: rgb(255, 255, 255);
+  padding: 15px;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow:2px 2px 10px #b2b4b7;
+  justify-content: center;
+  align-items: center;
+}
+#products .box-image{
+  border-radius:50%;
+  border: #0D264F;
+  height: 100px;
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-left: 25%;
+}
+#products .para-wrap{
+  margin-top: 10px;
+
+}
+
+#products .anim{
+  height: 25%;
+}
+#contact{
+  height: 90vh;
+  font-family: 'Outfit';
+}
+
+#contact h1{
+  font-weight: 900;
+}
+
+#contact span{
+  color: #31d9f7;
+}
+
+#contact p{
+  font-weight: bold;
+}
+
+#contact .wrap-box{
+  margin-top: 45%;
+}
+
+#contact .image-box{
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  margin-left: 30%;
+  height: 50%;
+}
+#contact .connect-btn{
+  background-color: #0D264F;
+  color: white;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 5px 5px 5px 5px;
+  width: 150px;
+  padding: 8px;
+}
+
+#footer{
+  background-color: #0D264F;
+  width: 100%;
+}
+#footer .first-line{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  font-weight: bold ;
+}
+
+#footer .social-icons{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
