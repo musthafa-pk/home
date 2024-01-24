@@ -15,6 +15,9 @@
   width: 5px;
 
 }
+html{
+  font-family:  "Outfit , Open Sans", sans-serif;
+}
 body {
   font-family: "Outfit , Open Sans", sans-serif;
   color: #444444;
@@ -143,7 +146,8 @@ h6{
 #header {
   transition: all 0.5s;
   z-index: 997;
-  padding: 15px 0;
+  padding-top: 10px;
+  /* padding: 15px 0; */
 }
 
 #header.header-scrolled,
@@ -153,6 +157,7 @@ h6{
 
 #header .logo {
   position: relative;
+  font-family: 'Outfit';
   /* font-size: 32px;
   margin: 0;
   padding: 0;
@@ -791,7 +796,7 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") fixed center center;
+  /* background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") fixed center center; */
   background-size: cover;
   padding: 60px 0;
 }
@@ -1101,7 +1106,7 @@ section {
 --------------------------------------------------------------*/
 .testimonials {
   padding: 80px 0;
-  background: url("../img/testimonials-bg.jpg") no-repeat;
+  /* background: url("../img/testimonials-bg.jpg") no-repeat; */
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -1650,6 +1655,7 @@ section {
   background-size: cover;
   position: relative;
   padding: 100px 0; /* Adjust padding as needed */
+
 }
 
 .parallax-overlay {
@@ -1660,12 +1666,6 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.parallax h2,
-.parallax p {
-
-  color: #fff; /* Adjust text color */
 }
 
 /* about page */
@@ -1685,7 +1685,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  background-color: rgba(0, 0, 0, 0.8); /* Adjust the opacity as needed */
 }
 
 #about .icon-box-left{
@@ -1705,7 +1705,7 @@ section {
 }
 #about h1{
   color: #31d9f7;
-}
+} 
 #about h4,
 #about .dot-lines,
 #about .wrap-box p {
@@ -1736,45 +1736,49 @@ line-height: normal;
 #about p{
 color: #0D264F;
 font-family: Outfit;
-font-size: 28px;
+font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
 
 #services {
+  font-family: 'Outfit';
   position: relative;
-  background-image: url(../img/office.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+  rgba(0, 0, 0, 0.5)), url("../img/about.jpg");
   background-repeat: no-repeat;
-  background-color:  rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  background-size: cover;
+  background-size:  100%;
   color: white;
 }
 
 #services .wrap-box {
-  padding: 25px;
+  /* padding: 25px; */
+  padding-left: 45px;
+  padding-right: 50px;
 }
 
-#services .serv {
+#services span {
   color: #31d9f7;
 }
-
+#services h1{
+  font-weight: bold;
+}
 #service-list h1 {
   color: white;
 }
 
 #service-list .box {
   background-color: #0d264f;
-  color: #626262;
+  color: #989393;
   border-radius: 25px;
   padding: 15px;
   margin-top: 20px;
 }
 
-
 #products{
-  font-family: 'Outfit';
+  font-family: 'Outfit';  
 }
 #products .headline{
   display: flex;
@@ -1787,9 +1791,13 @@ line-height: normal;
 }
 #products .wrap-box{
   display: flex;
+  flex-wrap: wrap;
   align-items: space-around;
   padding: 25px;
+  gap: 25px;
   justify-content: space-around;
+  /* justify-content: space-around; */
+  
 }
 #products .heading{
   font-size: 28px;
@@ -1799,13 +1807,14 @@ line-height: normal;
 }
 
 #products .box{
-  width: 300px;
   background-color: rgb(255, 255, 255);
   padding: 15px;
-  border-radius: 25px 25px 25px 25px;
+  border-radius: 25px;
   box-shadow:2px 2px 10px #b2b4b7;
   justify-content: center;
   align-items: center;
+  flex: 1;
+  max-width: 300px;
 }
 #products .box-image{
   border-radius:50%;
@@ -1819,7 +1828,6 @@ line-height: normal;
 }
 #products .para-wrap{
   margin-top: 10px;
-
 }
 
 #products .anim{
