@@ -217,6 +217,11 @@ h6{
     margin-right: 15px;
   }
 }
+@media (max-width:420px){
+  #products .wrap-box{
+    flex-direction: column;
+  }
+}
 
 /*--------------------------------------------------------------
 # Navigation Menu
