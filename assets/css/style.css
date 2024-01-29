@@ -1767,8 +1767,10 @@ line-height: normal;
 #services {
   font-family: 'Outfit';
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7),
-  rgba(0, 0, 0, 0.5)), url("../img/about.jpg");
+  background-image: 
+  /* linear-gradient(rgba(0, 0, 0, 0.7),
+  rgba(0, 0, 0, 0.5)), */
+   url("../img/techbg.jpeg");
   background-repeat: no-repeat;
   overflow: hidden;
   background-size:  100%;
@@ -1793,6 +1795,7 @@ line-height: normal;
 }
 
 #service-list .box {
+  background: url(../img/techbg.jpeg);
   background-color: #0d264f;
   color: #989393;
   border-radius: 25px;
@@ -1857,8 +1860,9 @@ line-height: normal;
   height: 25%;
 }
 #contact{
-  height: 90vh;
+  min-height: 100vh;
   font-family: 'Outfit';
+  padding: 50px 0;
 }
 
 #contact h1{
@@ -1874,15 +1878,14 @@ line-height: normal;
 }
 
 #contact .wrap-box{
-  margin-top: 45%;
+  margin-top: 10%;
 }
 
 #contact .image-box{
-  display: flex;
-  align-items: end;
-  justify-content: end;
+  max-width: 80%;
+  height: auto;
   margin-left: 30%;
-  height: 50%;
+  padding: 10%;
 }
 #contact .connect-btn{
   background-color: #0D264F;
@@ -1890,9 +1893,23 @@ line-height: normal;
   justify-content: center;
   display: flex;
   align-items: center;
-  border-radius: 5px 5px 5px 5px;
+  border-radius: 5px;
   width: 150px;
   padding: 8px;
+  text-align: center;
+  margin-top: 20px;
+}
+#contact .connect-btn-whatsapp{
+  background-color: #0eb93e;
+  color: white;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  width: 150px;
+  padding: 8px;
+  text-align: center;
+  margin-top: 20px;
 }
 /* 
 #footer{
