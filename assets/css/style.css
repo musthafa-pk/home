@@ -453,7 +453,8 @@ h6{
   /* background: url("../img/office.jpg") top center; */
   /* background-size: cover; */
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
+   
 }
 
 #hero video {
