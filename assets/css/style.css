@@ -81,7 +81,6 @@ h6{
   opacity: 1;
 }
 
-
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -454,7 +453,7 @@ h6{
   /* background: url("../img/office.jpg") top center; */
   /* background-size: cover; */
   position: relative;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 #hero video {
@@ -650,6 +649,7 @@ section {
 .about .content ul {
   list-style: none;
   padding: 0;
+  position: fixed;
 }
 
 .about .content ul li {
@@ -1656,19 +1656,29 @@ section {
 
 #parallax {
   /* background: url('path/to/your-parallax-image.jpg') center fixed; */
-  background-color: white;
+  /* background-color: white; */
+  background: url(../img/office.jpg) center fixed;
   background-size: cover;
   position: relative;
   padding: 100px 0; /* Adjust padding as needed */
+  color: wheat;
+  height: 50vh;
+  text-align: center;
+}
+.objective{
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
 }
 
 .parallax-overlay {
-  /* background: rgba(0, 0, 0, 0.6);  */
+  background: rgba(0, 0, 0, 0.6); 
   /* Adjust the overlay color and opacity */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100vh;
 }
 
 /* about page */
@@ -1721,19 +1731,28 @@ section {
   padding: 10px;
 }
 #about-2{
-  height: 90vh;
+  height: auto;
+  padding: 50px 0;
 }
 
 #about-2 h1{
 color: #0D264F;
 font-family: Outfit;
-font-size: 44px;
+font-size: 24px;
 font-style: normal;
 font-weight: 600;
-line-height: normal;
+line-height: 1.5;
 }
 #about-2 #lottie-container{
-  height: 50%;
+  max-width: 100%;
+  height: auto;
+}
+#about-2 .lottie-wrap{
+  width:500px
+}
+
+#about-2 .icon-box{
+  padding: 50px;
 }
 
 #about p{
@@ -1760,6 +1779,7 @@ line-height: normal;
   /* padding: 25px; */
   padding-left: 45px;
   padding-right: 50px;
+
 }
 
 #services span {
@@ -2058,4 +2078,10 @@ color: #ff5e14;
 #footer .footer-menu li a {
 font-size: 14px;
 color: #878787;
+}
+/* goal */
+
+#goal{
+  height: 100vh;
+  
 }
