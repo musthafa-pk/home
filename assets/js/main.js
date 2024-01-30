@@ -527,3 +527,10 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   
 })();
+
+//get current year
+// Get the current year
+const currentYear = new Date().getFullYear();
+
+// Insert the current year into the span element
+document.getElementById('currentYear').textContent = currentYear;
