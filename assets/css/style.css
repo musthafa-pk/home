@@ -60,12 +60,14 @@ h6{
   height: 40px;
   border-radius: 4px;
   transition: all 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .back-to-top i {
   font-size: 28px;
   color: #151515;
-  line-height: 0;
 }
 
 .back-to-top:hover {
@@ -803,6 +805,7 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+
 .services .icon-box {
   text-align: center;
   border: 1px solid #ebebeb;
@@ -1725,6 +1728,18 @@ section {
   height: 50vh;
   text-align: center;
 }
+.blur-background {
+  background: url(../img/office.jpg) center fixed;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(5px); /* Adjust the blur amount as needed */
+  z-index: -1; /* Ensure the background is behind the content */
+}
+
 .objective{
   display: flex;
   align-items: center;
@@ -1827,29 +1842,26 @@ line-height: normal;
 #services {
   font-family: 'Outfit';
   position: relative;
-  background-image: 
-  /* linear-gradient(rgba(0, 0, 0, 0.7),
-  rgba(0, 0, 0, 0.5)), */
-   url("../img/techbg.jpeg");
+  background-image: url("../img/techbanner.jpeg");
   background-repeat: no-repeat;
-  overflow: hidden;
-  background-size:  100%;
+  background-size: cover; /* Changed to cover to ensure the image covers the entire container */
   color: white;
+  overflow: hidden;
 }
 
 #services .wrap-box {
-  /* padding: 25px; */
-  padding-left: 45px;
-  padding-right: 50px;
-
+  padding-left: 20px; /* Adjust padding to suit smaller screens */
+  padding-right: 20px; /* Adjust padding to suit smaller screens */
 }
 
 #services span {
   color: #31d9f7;
 }
-#services h1{
+
+#services h1 {
   font-weight: bold;
 }
+
 #service-list h1 {
   color: white;
 }
@@ -1863,62 +1875,69 @@ line-height: normal;
   margin-top: 20px;
 }
 
-#products{
-  font-family: 'Outfit';  
+@media only screen and (max-width: 600px) {
+  #services .wrap-box {
+    padding-left: 20px; /* Adjust padding for smaller screens */
+    padding-right: 20px; /* Adjust padding for smaller screens */
+  }
 }
-#products .headline{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+
+#products {
+  font-family: 'Outfit';
+  background-color: #f5f5f5; /* Set a background color */
+  padding: 50px 0; /* Add padding for better spacing */
+}
+
+#products .headline {
+  text-align: center; /* Center-align the headline */
   font-weight: bold;
+  color: #0D264F;
 }
-#products span{
+
+#products span {
   color: #31d9f7;
 }
-#products .wrap-box{
+
+#products .wrap-box {
   display: flex;
   flex-wrap: wrap;
-  align-items: space-around;
+  justify-content: center;
+  gap: 40px; /* Adjust spacing between boxes */
   padding: 25px;
-  gap: 25px;
-  justify-content: space-around;
-  /* justify-content: space-around; */
-  
-}
-#products .heading{
-  font-size: 28px;
-  display: flex;
-  justify-content: center;
-  color:#0D264F;
 }
 
-#products .box{
-  background-color: rgb(255, 255, 255);
-  padding: 15px;
-  border-radius: 25px;
-  box-shadow:2px 2px 10px #b2b4b7;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
+#products .box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
   max-width: 300px;
-}
-#products .box-image{
-  border-radius:50%;
-  border: #0D264F;
-  height: 100px;
-  width: 100px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  margin-left: 25%;
-}
-#products .para-wrap{
-  margin-top: 10px;
+  width: 100%;
+  transition: transform 0.3s ease; /* Add smooth hover transition */
 }
 
-#products .anim{
-  height: 25%;
+#products .box:hover {
+  transform: translateY(-10px); /* Apply a slight lift on hover */
 }
+
+#products .heading {
+  font-size: 24px;
+  text-align: center;
+  color: #0D264F;
+  margin-bottom: 20px; /* Add spacing between heading and content */
+}
+
+#products .para-wrap {
+  color: #555; /* Adjust paragraph text color */
+  font-size: 16px;
+}
+
+#products .anim {
+  height: auto; /* Adjust height of animation container */
+  margin: 0 auto; /* Center align the animation */
+}
+
 #contact{
   min-height: 100vh;
   font-family: 'Outfit';
