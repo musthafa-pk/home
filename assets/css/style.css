@@ -1877,8 +1877,8 @@ line-height: normal;
 
 @media only screen and (max-width: 600px) {
   #services .wrap-box {
-    padding-left: 20px; /* Adjust padding for smaller screens */
-    padding-right: 20px; /* Adjust padding for smaller screens */
+    padding-left: 1%; /* Adjust padding for smaller screens */
+    padding-right: 1%; /* Adjust padding for smaller screens */
   }
 }
 
