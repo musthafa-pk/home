@@ -707,7 +707,7 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 28px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 .about .content ul {
@@ -1807,18 +1807,26 @@ section {
 #about .icon-box{
   padding: 10px;
 }
-#about-2{
-  height: auto;
-  padding: 50px 0;
+#about-2 {
+  position: relative;
+  /* background-image: url("../img/office.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* Add this to create the parallax effect */
+  padding: 100px 0; /* Adjust padding as needed */
 }
+
 
 #about-2 h1{
 color: #0D264F;
 font-family: Outfit;
-font-size: 24px;
+/* font-size: 24px; */
 font-style: normal;
 font-weight: 600;
 line-height: 1.5;
+}
+#about-2 p{
+  padding-left: 5%;
 }
 #about-2 #lottie-container{
   max-width: 100%;
@@ -1835,25 +1843,48 @@ line-height: 1.5;
 #about p{
 color: #0D264F;
 font-family: Outfit;
-font-size: 16px;
+font-size: 18px;
 font-style: normal;
 font-weight: 400;
-line-height: normal;
+line-height: 1.5;
 }
 
+/* Add this CSS for animation */
+@keyframes chaavieAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Adjust the distance as needed */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#about .icon-box-left img.left-image {
+  animation: chaavieAnimation 3s infinite; /* Adjust the duration as needed */
+}
+
+
 #services {
-  font-family: 'Outfit';
   position: relative;
   background-image: url("../img/techbanner.jpeg");
   background-repeat: no-repeat;
-  background-size: cover; /* Changed to cover to ensure the image covers the entire container */
+  background-size: cover;
+  background-attachment: fixed; /* Add this to create the parallax effect */
   color: white;
   overflow: hidden;
+  padding: 100px 0; /* Adjust padding as needed */
 }
 
-#services .wrap-box {
-  padding-left: 20px; /* Adjust padding to suit smaller screens */
-  padding-right: 20px; /* Adjust padding to suit smaller screens */
+#services .wrap-box-main {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 5%;
+}
+#services p{
+  padding: 10px;
 }
 
 #services span {
@@ -1864,11 +1895,11 @@ line-height: normal;
   font-weight: bold;
 }
 
-#service-list h1 {
+#services h1 {
   color: white;
 }
 
-#service-list .box {
+#services .box {
   background: url(../img/techbg.jpeg);
   background-color: #0d264f;
   color: #989393;
@@ -1883,9 +1914,26 @@ line-height: normal;
     padding-right: 20px; /* Adjust padding for smaller screens */
   }
 }
+/* Add this CSS for animation */
+@keyframes imageAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px); /* Adjust the distance as needed */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#services .wrap-box img {
+  animation: imageAnimation 3s infinite; /* Adjust the duration as needed */
+}
 
 
 #products {
+  height: 100%;
   font-family: 'Outfit';
   background-color: #f5f5f5; /* Set a background color */
   padding: 50px 0; /* Add padding for better spacing */
@@ -1903,9 +1951,9 @@ line-height: normal;
 
 #products .wrap-box {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
-  gap: 40px; /* Adjust spacing between boxes */
+  gap: 20px; /* Adjust spacing between boxes */
   padding: 25px;
 }
 
@@ -1914,9 +1962,6 @@ line-height: normal;
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  max-width: 300px;
-  width: 100%;
-  transition: transform 0.3s ease; /* Add smooth hover transition */
 }
 
 #products .box:hover {
@@ -1927,16 +1972,14 @@ line-height: normal;
   font-size: 24px;
   text-align: center;
   color: #0D264F;
-  margin-bottom: 20px; /* Add spacing between heading and content */
 }
 
 #products .para-wrap {
   color: #555; /* Adjust paragraph text color */
   font-size: 16px;
 }
-
 #products .anim {
-  height: auto; /* Adjust height of animation container */
+  height: 200px; /* Adjust height of animation container */
   margin: 0 auto; /* Center align the animation */
 }
 
@@ -1947,6 +1990,7 @@ line-height: normal;
 }
 
 #contact h1{
+  color: #0D264F;
   font-weight: 900;
 }
 
