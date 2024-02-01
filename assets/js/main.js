@@ -279,7 +279,7 @@
     AOS.init({
       duration: 1000,
       easing: "ease-in-out",
-      once: true,
+      once: false,
       mirror: false
     });
   });
@@ -534,3 +534,23 @@ const currentYear = new Date().getFullYear();
 
 // Insert the current year into the span element
 document.getElementById('currentYear').textContent = currentYear;
+
+
+//show more button in products
+document.addEventListener("DOMContentLoaded", function() {
+  const viewMoreButtons = document.querySelectorAll('.view-more');
+
+  viewMoreButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const content = this.previousElementSibling;
+
+      if (content.classList.contains('expanded')) {
+        content.classList.remove('expanded');
+        this.textContent = 'View More';
+      } else {
+        content.classList.add('expanded');
+        this.textContent = 'View Less';
+      }
+    });
+  });
+});
