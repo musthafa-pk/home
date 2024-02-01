@@ -1984,9 +1984,8 @@ line-height: 1.5;
 }
 
 #contact{
-  min-height: 100vh;
   font-family: 'Outfit';
-  padding: 50px 0;
+  /* padding: 50px 0; */
 }
 
 #contact h1{
@@ -2013,8 +2012,9 @@ line-height: 1.5;
   padding: 10%;
 }
 #contact .connect-btn{
-  background-color: #0D264F;
-  color: white;
+  /* background-color: #0D264F; */
+  border: 0.5px solid #0D264F;
+  color: #0D264F;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -2024,9 +2024,14 @@ line-height: 1.5;
   text-align: center;
   margin-top: 20px;
 }
-#contact .connect-btn-whatsapp{
-  background-color: #0eb93e;
+#contact .connect-btn:hover{
   color: white;
+  background-color: #0D264F;
+}
+#contact .connect-btn-whatsapp{
+  /* background-color: #0eb93e; */
+  border: 0.5px solid #18d26e;
+  color: #18d26e;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -2035,6 +2040,10 @@ line-height: 1.5;
   padding: 8px;
   text-align: center;
   margin-top: 20px;
+}
+#contact .connect-btn-whatsapp:hover{
+  color: white;
+  background-color: #18d26e;
 }
 /* 
 #footer{
