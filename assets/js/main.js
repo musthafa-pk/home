@@ -342,7 +342,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-(function() {
+(function() 
+{
 
   var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
 
@@ -554,3 +555,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
+
+// products page
