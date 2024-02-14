@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Make the dot in blue color
         textElement.innerHTML += '<span style="color: #31d9f7;">' + currentChar + '</span>';
       } else if (currentChar === 'i') {
-        textElement.innerHTML += '<span style="background: linear-gradient(-10deg,#fff,#fff, #fff, #31d9f7,#31d9f7); -webkit-background-clip: text; color: transparent;">' + currentChar + '</span>';
+        textElement.innerHTML += '<span style="background: linear-gradient(-10deg,#fff,#fff, #fff,#fff, #31d9f7,#31d9f7); -webkit-background-clip: text; color: transparent;">' + currentChar + '</span>';
       } else {
         textElement.innerHTML += currentChar;
       }
