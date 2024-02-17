@@ -2115,7 +2115,8 @@ font-size: 24px;;
   height: 420px;
   perspective: 1000px;
   font-family: 'Outfit';
-  padding-top: 1%;
+  /* padding-top: 1%; */
+  padding: 5%;
 }
 @media only screen and (max-width:900px) {
   .flip-card{
