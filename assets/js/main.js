@@ -236,7 +236,6 @@
   const portfolioLightbox = GLightbox({
     selector: '.portfolio-lightbox'
   });
-
   /**
    * Portfolio details slider
    */
@@ -308,7 +307,6 @@ document.addEventListener('DOMContentLoaded', function () {
       } else {
         textElement.innerHTML += currentChar;
       }
-
       index++;
       setTimeout(function () {
         typeText(index);
@@ -333,7 +331,9 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       // Restart typing after backspacing
       textElement.innerHTML = ''; // Clear the text content before restarting
-      typeText(0);
+      setTimeout(function(){
+        typeText(0);
+      },500);
     }
   }
 

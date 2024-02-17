@@ -195,6 +195,16 @@ h6{
   font-size: 12px;
 }
 
+@media (min-width:300px) and (max-width:900px){
+  #header .logo img{
+    height:50%;
+    width:50%;
+  }
+  #header .logo-text{
+    display: none;
+  }
+}
+
 /*--------------------------------------------------------------
 #  Get Startet Button
 --------------------------------------------------------------*/
@@ -459,7 +469,6 @@ h6{
   /* background-size: cover; */
   position: relative;
   overflow: hidden;
-
 }
 
 #hero video {
@@ -557,6 +566,47 @@ h6{
   color: white;
 }
 
+@media only screen and (max-width:900px){
+  #hero h3{
+    position: relative;
+    /* font-family: 'Outfit'; */
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #31d9f7, #fff, #31d9f7);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 5s linear;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
+  #hero .for-pc{
+    display: none;
+  }
+  #hero .blocks{
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid #31d9f7; */
+    margin: 30px;
+    /* border-radius: 50%; */
+  }
+}
+
+@media only screen and (min-width:901px){
+  #hero .for-mobile{
+    display: none;
+  }
+}
+
 #typing-text::after {
   content: "|"; /* Cursor symbol */
   display: inline-block;
@@ -645,7 +695,7 @@ h6{
 
 @media (max-width: 768px) {
   #hero {
-    height: auto;
+    height: 100vh;
   }
 
   #hero h1 {
@@ -658,6 +708,17 @@ h6{
     line-height: 24px;
   }
 }
+@media (min-width:300px) and (max-width:900px){
+  #hero h1{
+    margin-top: 100px;
+  }
+  #hero .icon-box{
+    background-color: rgba(0, 0, 0, 0.0);
+    border: none;
+
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Sections General
@@ -733,6 +794,9 @@ section {
 
 .about .content p:last-child {
   margin-bottom: 0;
+}
+@media (min-width:300px) and (max-width:900px){
+  
 }
 
 /*--------------------------------------------------------------
@@ -1730,6 +1794,7 @@ section {
   /* padding: 100px 0; */
   /* color: wheat; */
   height: 100%;
+  width: 100%;
   text-align: center;
 }
 #parallax h3{
@@ -1744,6 +1809,7 @@ section {
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   /* height: 100vh; */
   filter: blur(5px); /* Adjust the blur amount as needed */
   z-index: -1; /* Ensure the background is behind the content */
@@ -1762,7 +1828,7 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 /* about page */
@@ -1773,7 +1839,7 @@ section {
   /* background-image: url(../img/office.jpg); */
   background-repeat: no-repeat;
   background-color:  rgba(0, 0, 0, 0.5);
-  overflow: hidden;
+  /* overflow: hidden; */
   background-size: cover;
   height: 100vh;
 }
@@ -1805,7 +1871,7 @@ section {
 }
 #about h1{
   color: #31d9f7;
-  font-size: 50px;
+  font-size: 3rem;
 } 
 #about h4,
 #about .dot-lines,
@@ -1818,6 +1884,17 @@ section {
 
 #about .icon-box{
   padding: 10px;
+}
+
+@media (min-width:300px) and (max-width:900px){
+  #about{
+  height: 100vh;
+  }
+}
+@media only screen and (max-width:900px){
+  #about .objective{
+    display: none;
+  }
 }
 #about-2 {
   font-family: 'Outfit';
@@ -1951,7 +2028,16 @@ font-size: 24px;;
   animation: imageAnimation 3s infinite; /* Adjust the duration as needed */
 }
 
-
+@media only screen and  (max-width:900px){
+  #services .col-md-3{
+    display:none;
+  }
+}
+@media only screen and (min-width:901px){
+  #services .for-pc{
+    display:none;
+  }
+}
 #products {
   height: 100%;
   font-family: 'Outfit';
