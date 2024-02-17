@@ -558,3 +558,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 // products page
+// flip card
