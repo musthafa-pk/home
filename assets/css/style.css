@@ -68,12 +68,12 @@ h6{
 
 .back-to-top i {
   font-size: 28px;
-  color: #151515;
+  color: #ffffff;
   line-height: 0;
 }
 
 .back-to-top:hover {
-  background: #151515;
+  background: #aeabab;
 }
 
 .back-to-top:hover i {
