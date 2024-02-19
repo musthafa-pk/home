@@ -1,9 +1,4 @@
-/**
-* Template Name: Gp - v4.10.0
-* Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 (function() {
   "use strict";
 
@@ -290,56 +285,96 @@
 
 })()
 //typing like text
-document.addEventListener('DOMContentLoaded', function () {
-  var textElement = document.getElementById('typing-text');
-  var cursorElement = document.getElementById('cursor');
-  var textContent = textElement.textContent;
-  textElement.textContent = ''; // Clear the text content
+// document.addEventListener('DOMContentLoaded', function () {
+//   var textElement = document.getElementById('typing-text');
+//   var cursorElement = document.getElementById('cursor');
+//   var textContent = textElement.textContent;
+//   textElement.textContent = ''; // Clear the text content
 
-  function typeText(index) {
-    if (index < textContent.length) {
-      var currentChar = textContent.charAt(index);
-      if (currentChar === '.') {
-        // Make the dot in blue color
-        textElement.innerHTML += '<span style="color: #31d9f7;">' + currentChar + '</span>';
-      } else if (currentChar === 'i') {
-        textElement.innerHTML += '<span style="background: linear-gradient(-10deg,#fff,#fff, #fff,#fff, #31d9f7,#31d9f7); -webkit-background-clip: text; color: transparent;">' + currentChar + '</span>';
-      } else {
-        textElement.innerHTML += currentChar;
-      }
-      index++;
-      setTimeout(function () {
-        typeText(index);
-      }, 100); // Adjust the typing speed (in milliseconds)
+//   function typeText(index) {
+//     if (index < textContent.length) {
+//       var currentChar = textContent.charAt(index);
+//       if (currentChar === '.') {
+//         // Make the dot in blue color
+//         textElement.innerHTML += '<span style="color: #31d9f7;">' + currentChar + '</span>';
+//       } else if (currentChar === 'i') {
+//         textElement.innerHTML += '<span style="background: linear-gradient(-10deg,#fff,#fff, #fff,#fff, #31d9f7,#31d9f7); -webkit-background-clip: text; color: transparent;">' + currentChar + '</span>';
+//       } else {
+//         textElement.innerHTML += currentChar;
+//       }
+//       index++;
+//       setTimeout(function () {
+//         typeText(index);
+//       }, 100); // Adjust the typing speed (in milliseconds)
+//     } else {
+//       // Cursor blinking effect
+//       cursorElement.style.display = (cursorElement.style.display === 'none') ? 'inline' : 'none';
+//       setTimeout(function () {
+//         // Start backspacing after cursor blinks
+//         backspaceText(textContent.length);
+//       }, 500); // Adjust the delay before backspacing (in milliseconds)
+//     }
+//   }
+
+//   function backspaceText(index) {
+//     if (index >= 0) {
+//       textElement.textContent = textContent.substring(0, index);
+//       index--;
+//       setTimeout(function () {
+//         backspaceText(index);
+//       }, 50); // Adjust the backspacing speed (in milliseconds)
+//     } else {
+//       // Restart typing after backspacing
+//       textElement.innerHTML = ''; // Clear the text content before restarting
+//       setTimeout(function(){
+//         typeText(0);
+//       },500);
+//     }
+//   }
+
+//   // Trigger the typing effect
+//   typeText(0);
+// });
+          // Select the typing text element
+const typingText = document.getElementById('typing-text');
+
+// Define the text to be typed
+const texts = ["Keying smart moves...", "Keying smart moves...", "Keying smart moves..."];
+
+// Initialize index for tracking current text
+let textIndex = 0;
+
+// Initialize index for tracking current character
+let charIndex = 0;
+
+// Speed of typing in milliseconds
+const typingSpeed = 100;
+
+// Function to type text
+function type() {
+    if (charIndex < texts[textIndex].length) {
+        typingText.textContent += texts[textIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingSpeed);
     } else {
-      // Cursor blinking effect
-      cursorElement.style.display = (cursorElement.style.display === 'none') ? 'inline' : 'none';
-      setTimeout(function () {
-        // Start backspacing after cursor blinks
-        backspaceText(textContent.length);
-      }, 500); // Adjust the delay before backspacing (in milliseconds)
+        setTimeout(erase, 2000); // Pause before erasing text
     }
-  }
+}
 
-  function backspaceText(index) {
-    if (index >= 0) {
-      textElement.textContent = textContent.substring(0, index);
-      index--;
-      setTimeout(function () {
-        backspaceText(index);
-      }, 50); // Adjust the backspacing speed (in milliseconds)
+// Function to erase text
+function erase() {
+    if (charIndex > 0) {
+        typingText.textContent = texts[textIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, typingSpeed / 2);
     } else {
-      // Restart typing after backspacing
-      textElement.innerHTML = ''; // Clear the text content before restarting
-      setTimeout(function(){
-        typeText(0);
-      },500);
+        textIndex = (textIndex + 1) % texts.length; // Move to the next text
+        setTimeout(type, typingSpeed / 2);
     }
-  }
+}
 
-  // Trigger the typing effect
-  typeText(0);
-});
+// Start typing initially
+type();
 
 
 (function() 
