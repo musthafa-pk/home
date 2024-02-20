@@ -270,6 +270,7 @@ h6{
   color: #fff;
   white-space: nowrap;
   transition: 0.3s;
+  letter-spacing: 2px;
 }
 
 .navbar a i,
@@ -2229,6 +2230,7 @@ font-size: 24px;;
   background: linear-gradient(rgba(0, 20, 51, 0.9), rgba(2, 2, 2, 0.9)), url("../img/techbg.jpeg") fixed center center;
   /* background-color:rgba(236, 235, 235, 0.8); */
 }
+
 #contact .contact-wrap{
   padding-left: 1%;
   /* background-color:rgba(0, 0, 0, 0.1); */

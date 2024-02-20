@@ -352,15 +352,23 @@ const typingSpeed = 100;
 
 // Function to type text
 function type() {
-    if (charIndex < texts[textIndex].length) {
-        typingText.textContent += texts[textIndex].charAt(charIndex);
-        charIndex++;
-        setTimeout(type, typingSpeed);
-    } else {
-        setTimeout(erase, 2000); // Pause before erasing text
-    }
+  if (charIndex < texts[textIndex].length) {
+      if (texts[textIndex].charAt(charIndex) === '.') {
+          // If the character is a period, add it in blue color
+          typingText.innerHTML += '<span style="color: #31d9f7;">.</span>';
+      } else if (texts[textIndex].charAt(charIndex) === 'i') {
+          // If the character is 'i', add it in blue color
+          typingText.innerHTML += '<span style="background: linear-gradient(-10deg,#fff,#fff, #fff,#fff, #31d9f7,#31d9f7); -webkit-background-clip: text; color: transparent;">' + texts[textIndex].charAt(charIndex) + '</span>';
+      } else {
+          // Otherwise, add the character normally
+          typingText.textContent += texts[textIndex].charAt(charIndex);
+      }
+      charIndex++;
+      setTimeout(type, typingSpeed);
+  } else {
+      setTimeout(erase, 5000); // Pause before erasing text
+  }
 }
-
 // Function to erase text
 function erase() {
     if (charIndex > 0) {

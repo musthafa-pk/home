@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Bar with Sub-Districts</title>
+  <style>
+    #searchInput {
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Search Bar with Sub-Districts</h2>
+
+<input type="text" id="searchInput" placeholder="Search...">
+<div id="searchResults"></div>
+
+<script>
+  const districts = [
+    { name: 'New York', subDistricts: ['Manhattan', 'Brooklyn', 'Queens', 'Bronx', 'Staten Island'] },
+    { name: 'Los Angeles', subDistricts: ['Downtown', 'Hollywood', 'Santa Monica', 'Beverly Hills'] },
+    { name: 'Chicago', subDistricts: ['Downtown', 'Lincoln Park', 'Wrigleyville'] },
+    { name: 'San Francisco', subDistricts: ['Downtown', 'Mission District', 'Fisherman\'s Wharf'] }
+    // Add more districts and sub-districts as needed
+  ];
+
+  const searchInput = document.getElementById('searchInput');
+  const searchResults = document.getElementById('searchResults');
+
+  function search() {
+    const searchText = searchInput.value.toLowerCase().trim();
+    searchResults.innerHTML = '';
+
+    districts.forEach(district => {
+      const districtName = district.name.toLowerCase();
+      const matchedSubDistricts = district.subDistricts.filter(subDistrict =>
+        subDistrict.toLowerCase().includes(searchText)
+      );
+
+      if (districtName.includes(searchText) || matchedSubDistricts.length > 0) {
+        const districtHeader = document.createElement('h3');
+        districtHeader.textContent = district.name;
+        searchResults.appendChild(districtHeader);
+
+        if (matchedSubDistricts.length > 0) {
+          const subDistrictList = document.createElement('ul');
+          matchedSubDistricts.forEach(subDistrict => {
+            const listItem = document.createElement('li');
+            listItem.textContent = subDistrict;
+            subDistrictList.appendChild(listItem);
+          });
+          searchResults.appendChild(subDistrictList);
+        }
+      }
+    });
+  }
+
+  searchInput.addEventListener('input', search);
+</script>
+
+</body>
+</html>
