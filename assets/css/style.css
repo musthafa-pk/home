@@ -2384,6 +2384,7 @@ label {
 
 input[type="text"],
 input[type="email"],
+input[type="number"],
 textarea {
   color: white;
   width: 100%;
