@@ -580,7 +580,7 @@ h6{
     background: linear-gradient(90deg, #31d9f7, #fff, #31d9f7);
     background-repeat: no-repeat;
     background-size: 80%;
-    animation: animate 5s linear;
+    animation: animate 3s linear;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
   }
@@ -588,9 +588,9 @@ h6{
     0% {
       background-position: -500%;
     }
-    100% { 
+    /* 100% { 
       background-position: 500%;
-    }
+    } */
   }
   #hero .for-pc{
     display: none;
@@ -810,6 +810,7 @@ section {
 .about .content p:last-child {
   margin-bottom: 0;
 }
+
 /*--------------------------------------------------------------
 # Clients
 --------------------------------------------------------------*/
@@ -1796,6 +1797,13 @@ section {
   font-size: 13px;
   color: #fff;
 }
+@media only screen and (max-width:900px) {
+  #footer .social-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }  
+}
 /* .parallax */
 
 #parallax {
@@ -1913,6 +1921,9 @@ section {
 @media only screen and (max-width:900px){
   #about .objective{
     display: none;
+  }
+  #about .icon-box{
+    padding: 3%;  
   }
 }
 #about-2 {
